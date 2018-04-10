@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Creating a blog with Github Pages and Jekyll"
+title:  "How to create a free blog with Github Pages and Jekyll"
 date:   2018-04-07 19:26:39 -0500
 categories: jekyll github-pages tutorial
 ---
