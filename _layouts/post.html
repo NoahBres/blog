@@ -2,27 +2,22 @@
 layout: default
 ---
 
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<nav class="nav flex">
+	<a href="https://noahbres.github.io" class="refer-home">Noah Bresler</a>
+	<ul>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Work</a></li>
+		<li><a href="https://noahbres.github.io/blog">Blog</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+</nav>
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
-  </header>
-
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
-
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+<div class="wrapper flex">
+	<div class="header flex">
+		<h1>{{ page.title | escape }}</h1>
+		<h3>{%- assign date_format = "%b. %-d, %Y" -%}{{ page.date | date: date_format }}</h3>
+	</div>
+	<article class="flex">
+		{{ content }}
+	</article>
+</div>
