@@ -21,7 +21,7 @@ stylesheet: styles/home.css
 		<li>
 			{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 			<h4 class="post-meta">{{ post.date | date: date_format }}</h4>
-			<a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+			<a class="post-link" href="{{site.baseurl}}{{ post.url | relative_url }}">{{ post.title | escape }}</a>
 			<p class="excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
 		</li>
 		{%- endfor -%}
