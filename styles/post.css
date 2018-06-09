@@ -230,12 +230,65 @@ img {
 	width: 100%;
 }
 
+#fab-btn {
+	position: fixed;
+	right: 25%;
+	bottom: 2em;
+
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: #5d59fd;
+	box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+
+	align-items: center;
+
+	opacity: 0.5;
+
+	transition: 300ms ease;
+}
+
+#fab-btn:hover {
+	opacity: 1;
+	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+}
+
+#fab-btn:before {
+	content: '';
+	display: block;
+	
+	height: 20px;
+	width: 20px;
+
+	border-top: 2px solid #fff;
+	border-left: 2px solid #fff;
+
+	transform: rotate(-135deg) translateY(2px) translateX(2px);
+	transform-style: preserve-3d;
+	transition: 300ms ease;
+}
+
+#fab-btn.up:before {
+	transform: rotateX(180deg) rotateZ(-135deg) translateY(2px) translateX(2px);
+}
+
 footer .thanks-for-reading {
 	color: #292929;
 	font-family: Georgia,Cambria,"Times New Roman",Times,serif;
 	font-weight: 400;
 	font-size: 1.5em;
 	text-align: center;
+}
+
+footer .thanks-for-reading .wave {
+	transform: rotate(0deg);
+	display: inline-block;
+}
+
+footer .thanks-for-reading .wave:hover {
+	animation: wave 500ms ease-in;
+	cursor: grab;
+	cursor: -webkit-grab;
 }
 
 footer .twitter-share {
@@ -279,6 +332,36 @@ footer .found-the-article-useful {
 @media(min-width: 1600px) {
 	#header-links, #right-bar {
 		width: 24em;
+	}
+}
+
+@keyframes wave {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	16% {
+		transform: rotate(30deg);
+	}
+
+	33% {
+		transform: rotate(0deg);
+	}
+
+	50% {
+		transform: rotate(-30deg);
+	}
+
+	66% {
+		transform: rotate(0deg);
+	}
+
+	83% {
+		transform: rotate(30deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
 	}
 }
 
