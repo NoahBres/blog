@@ -80,7 +80,7 @@ body {
 	display: inline-block;
 	padding: 0 0.3em;
 	margin-top: 0;
-	margin-bottom: 3em;
+	margin-bottom: 0.6em;
 
 	text-align: center;
 	font-weight: 400;
@@ -110,10 +110,82 @@ body {
 	top: 50%;
 }
 
+.header h4 {
+	margin-top: 0;
+	color: #6f6f6f;
+	font-weight: 400;
+	font-size: 1em;
+}
+
+.content-wrapper {
+	width: 100%;
+	flex-direction: row;
+}
+
+#header-links, #right-bar {
+	display: block;
+	width: 18em;
+	margin-top: 5em;
+	height: max-content;
+}
+
+#header-links {
+	border: 1px solid #e5e5e5;
+	border-radius: 0.5em;
+
+	position: -webkit-sticky;
+	position: sticky;
+	top: 1em;
+
+	padding: 2em 1.5em;
+	margin-right: 1em;
+
+	opacity: 0.5;
+	transition: 300ms ease;
+}
+
+#header-links.hidden, #right-bar.hidden {
+	display: none;
+}
+
+#header-links:hover {
+	opacity: 1;
+}
+
+#header-links h2 {
+	margin-top: 0;
+	color: #292929;
+}
+
+#header-links #table-o-contents {
+	padding-left: 1em;
+	list-style-type: none;
+}
+
+#header-links #table-o-contents li {
+	padding: 0.3em 0;
+}
+
+#header-links #table-o-contents li a {
+	text-decoration: none;
+	color: #534efd;
+
+	transition: 300ms ease;
+}
+
+#header-links #table-o-contents li a:hover, #header-links #table-o-contents li a.active {
+	color: #bd0080;
+}
+
+#header-links #table-o-contents li ul {
+	margin-top: 0.2em;
+}
+
 article {
 	max-width: 740px;
 	width: 100%;
 	padding: 0 20px;
+	margin-top: 3em;
 
 	color: #292929;
 	font-family: Georgia,Cambria,"Times New Roman",Times,serif;
@@ -156,6 +228,58 @@ p a:hover, ol li a:hover, h3 a:hover {
 
 img {
 	width: 100%;
+}
+
+footer .thanks-for-reading {
+	color: #292929;
+	font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+	font-weight: 400;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+footer .twitter-share {
+	flex-direction: row;
+	align-items: center;
+
+	background: #f5f5f5;
+	padding: 0.5em 3em;
+	margin-top: 2em;
+	margin-bottom: 3em;
+}
+
+footer .twitter-icon {
+	padding-right: 1em;
+}
+
+footer .twitter-icon .icon {
+	width: 1em;
+	height: 1em;
+	font-size: 1.5em;
+	fill: #55acee;
+}
+
+footer .found-the-article-useful {
+	font-size: 1em;
+	color: #666;
+}
+
+@media(max-width: 1350px) {
+	#header-links, #right-bar {
+		display: none;
+	}
+}
+
+@media(min-width: 1500px) {
+	#header-links, #right-bar {
+		width: 20em;
+	}
+}
+
+@media(min-width: 1600px) {
+	#header-links, #right-bar {
+		width: 24em;
+	}
 }
 
 /* Terminal */

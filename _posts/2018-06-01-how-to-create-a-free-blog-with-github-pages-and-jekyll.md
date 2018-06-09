@@ -186,7 +186,7 @@ Close the `bundle exec jekyll serve` command if it's still running by typing `ct
 
 Congrats you're done! Github will now publish your page at the url *https://username.github.io*. It may take a few minutes for Github to get up and running though.
 
-Want to get deeper into customizing Jekyll? Check out the [docs][jekyll-docs]. Enjoy your new blog?
+Want to get deeper into customizing Jekyll? Check out the [docs][jekyll-docs]. Enjoy your new blog!
 
 Need any help? Happy to help on Twitter [@NoahBres][my-twitter]
 
@@ -542,6 +542,27 @@ Need any help? Happy to help on Twitter [@NoahBres][my-twitter]
 	}
 }
 </style>
+
+<script id="toc-data" type="text/template">
+	<li><a href="#jekyll--github-pages">Jekyll + Github Pages</a>
+		<ul>
+			<li><a href="#so-whats-jekyll">So what's Jekyll?</a></li>
+			<li><a href="#how-does-github-come-into-play">How does Github come into play?</a></li>
+		</ul>
+	</li>
+	<li><a href="#sounds-cool-how-do-i-start">Sounds cool. How do I start?</a>
+		<ul>
+			<li><a href="#1-signup-for-github">1. Signup for Github</a></li>
+			<li><a href="#2-create-a-github-repo">2. Create a Github repo</a></li>
+			<li><a href="#3-install-jekyll">3. Install Jekyll</a></li>
+			<li><a href="#4-new-jekyll-project">4. New Jekyll Project</a></li>
+			<li><a href="#5-configure-jekyll">5. Configure Jekyll</a></li>
+			<li><a href="#6-run-jekyll">6. Run Jekyll</a></li>
+			<li><a href="#7-writing-your-first-post">7. Writing your first post</a></li>
+			<li><a href="#8-host-on-github-pages">8. Host on Github Pages</a></li>
+		</ul>
+	</li>
+</script>
 
 [jekyll-link]: https://jekyllrb.com
 [jekyll-docs]: https://jekyllrb.com/docs/home
