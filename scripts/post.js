@@ -53,6 +53,20 @@ function fabButton() {
 			fabElem.classList = 'flex';
 		}
 	}
+
+	let angle = getScrollPercent() / 100 * 360 - 0.1;
+	let paddedRadius = 50 + 1;
+	let radians = (angle * Math.PI / 180);
+	let x = Math.sin(radians) * paddedRadius;
+	let y = Math.cos(radians) * -paddedRadius;
+	let mid = (angle > 180) ? 1 : 0;
+	let pathData = 'M 0 0 v -%@ A %@ %@ 1 '.replace(/%@/gi, paddedRadius)
+					+ mid + ' 1 '
+					+ x + ' '
+					+ y + ' z';
+
+	let bar = document.getElementsByClassName('progress-radial-bar')[0];
+	bar.setAttribute('d', pathData);
 }
 
 function getScrollPercent() {

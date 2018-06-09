@@ -272,6 +272,18 @@ img {
 	transform: rotateX(180deg) rotateZ(-135deg) translateY(2px) translateX(2px);
 }
 
+#fab-btn svg {
+	position: absolute;
+}
+
+#fab-btn .progress-radial-track {
+	fill: transparent;
+}
+
+#fab-btn .progress-radial-bar {
+	fill: #fff;
+}
+
 footer .thanks-for-reading {
 	color: #292929;
 	font-family: Georgia,Cambria,"Times New Roman",Times,serif;
