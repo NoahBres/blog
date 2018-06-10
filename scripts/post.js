@@ -5,6 +5,7 @@ let headings;
 let lastHeading;
 
 const fabElem = document.getElementById('fab-btn');
+const mobileTopElem = document.getElementById('mobile-nav-top');
 let fabDown = false;
 
 if(tocData !== null) {
@@ -12,6 +13,11 @@ if(tocData !== null) {
 	document.getElementById('table-o-contents').innerHTML = tocData.innerHTML;
 	document.getElementById('header-links').classList = '';
 	document.getElementById('right-bar').classList = '';
+
+	// Add stuff to mobile TOC
+	document.getElementById('mobile-table-o-contents').innerHTML = tocData.innerHTML;
+	document.getElementById('mobile-toc-script').style.display = 'block';
+	document.getElementById('mobile-toc-noscript').style.display = 'none';
 
 	tocData.parentNode.removeChild(tocData);
 
@@ -29,13 +35,19 @@ function checkHeadings() {
 	}
 
 	if(lastHeading != headings[i]) {
-		if(lastHeading != null)
-			document.querySelector(`[href="#${lastHeading.id}"]`).classList = '';
+		if(lastHeading != null) {
+			let elems = document.querySelectorAll(`[href="#${lastHeading.id}"]`);
+			for(let i = 0; i < elems.length; i++) {
+				elems[i].classList = '';
+			}
+		}
 
 		lastHeading = headings[i];
 		
-		let element = document.querySelector(`[href="#${lastHeading.id}"]`);
-		element.classList = 'active';
+		let elems = document.querySelectorAll(`[href="#${lastHeading.id}"]`);
+		for(let i = 0; i < elems.length; i++) {
+			elems[i].classList = 'active';
+		}
 	}
 } 
 
@@ -45,28 +57,40 @@ function fabButton() {
 			fabDown = true;
 			fabElem.href = "#top";
 			fabElem.classList = 'flex up';
+
+			mobileTopElem.href = '#top';
+			mobileTopElem.classList = 'up';
 		}
 	} else {
 		if(fabDown) {
 			fabDown = false;
 			fabElem.href = "#footer";
 			fabElem.classList = 'flex';
+
+			mobileTopElem.href = '#footer';
+			mobileTopElem.classList = '';
 		}
 	}
 
-	let angle = getScrollPercent() / 100 * 360 - 0.1;
-	let paddedRadius = 50 + 1;
-	let radians = (angle * Math.PI / 180);
-	let x = Math.sin(radians) * paddedRadius;
-	let y = Math.cos(radians) * -paddedRadius;
-	let mid = (angle > 180) ? 1 : 0;
-	let pathData = 'M 0 0 v -%@ A %@ %@ 1 '.replace(/%@/gi, paddedRadius)
-					+ mid + ' 1 '
-					+ x + ' '
-					+ y + ' z';
+	let windowWidth = window.innerWidth
+	|| document.documentElement.clientWidth
+	|| document.body.clientWidth;
 
-	let bar = document.getElementsByClassName('progress-radial-bar')[0];
-	bar.setAttribute('d', pathData);
+	if(windowWidth > 500) {
+		let angle = getScrollPercent() / 100 * 360 - 0.1;
+		let paddedRadius = 50 + 1;
+		let radians = (angle * Math.PI / 180);
+		let x = Math.sin(radians) * paddedRadius;
+		let y = Math.cos(radians) * -paddedRadius;
+		let mid = (angle > 180) ? 1 : 0;
+		let pathData = 'M 0 0 v -%@ A %@ %@ 1 '.replace(/%@/gi, paddedRadius)
+						+ mid + ' 1 '
+						+ x + ' '
+						+ y + ' z';
+
+		let bar = document.getElementsByClassName('progress-radial-bar')[0];
+		bar.setAttribute('d', pathData);
+	}
 }
 
 function getScrollPercent() {

@@ -30,12 +30,35 @@ layout: default
 <nav id="nav" class="nav flex">
 	<a href="https://noahbres.github.io" class="refer-home">Noah Bresler</a>
 	<ul>
-		<li><a href="#">About</a></li>
-		<li><a href="#">Work</a></li>
+		<li><a href="https://noahbres.github.io">About</a></li>
+		<li><a href="https://noahbres.github.io">Work</a></li>
 		<li><a href="https://noahbres.github.io/blog">Blog</a></li>
-		<li><a href="#">Contact</a></li>
+		<li><a href="https://noahbres.github.io">Contact</a></li>
 	</ul>
 </nav>
+<input type="checkbox" id="mobile-nav-hamburger">
+<label id="mobile-nav-hamburger-menu" for="mobile-nav-hamburger"></label>
+<nav class="mobile-nav flex">
+	<div style="display: block; width: 15px"></div>
+	<a class="mobile-nav-home" href="https://noahbres.github.io">Noah</a>
+	<a id="mobile-nav-top" href="#footer"></a>
+</nav>
+<div class="mobile-toc">
+	<div id="mobile-toc-script">
+		<h2>Table of Contents</h2>
+		<ul id="mobile-table-o-contents">
+			
+		</ul>
+	</div>
+	<div id="mobile-toc-noscript" class="flex">
+		<ul class="flex">
+			<a href="https://noahbres.github.io">Home</a>
+			<a href="https://noahbres.github.io">About</a>
+			<a href="https://noahbres.github.io">Work</a>
+			<a href="https://noahbres.github.io">Contact</a>
+		</ul>
+	</div>
+</div>
 
 <div class="header flex">
 	<h1>{{ page.title | escape }}</h1>
@@ -64,7 +87,7 @@ layout: default
 		<span class="twitter-icon flex">
 			<svg class="icon" viewBox="0 0 39 32"><use xlink:href="#icon-twitter-bird"></use></svg>
 		</span>
-		<p class="found-the-article-useful">Found the article useful? <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}%20{{ site.url }}/blog/{{ page.url }}%20by%20%40NoahBres" target="_blank" rel="noopener">I would appreciate a share on Twitter!</a></p>
+		<p class="found-the-article-useful">Found the article useful? I would appreciate <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}%20{{ site.url }}/blog/{{ page.url }}%20by%20%40NoahBres" target="_blank" rel="noopener">a share on Twitter!</a></p>
 	</div>
 </footer>
 
