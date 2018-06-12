@@ -677,7 +677,7 @@ footer .found-the-article-useful {
 /* Window videos */
 @media (min-width: 800px) {
 	.window-video {
-		display: block;
+		display: flex;
 		align-self: center;
 	}
 
