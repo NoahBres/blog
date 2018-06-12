@@ -11,6 +11,20 @@ stylesheet: styles/home.css
 		<li><a href="https://noahbres.github.io">Contact</a></li>
 	</ul>
 </nav>
+<input type="checkbox" id="mobile-nav-hamburger">
+<label id="mobile-nav-hamburger-menu" for="mobile-nav-hamburger"></label>
+<nav class="mobile-nav flex">
+	<a class="mobile-nav-home" href="#">Noah</a>
+</nav>
+<div class="mobile-pullout flex">
+	<ul class="flex">
+		<a href="https://noahbres.github.io">Home</a>
+		<a href="https://noahbres.github.io">About</a>
+		<a href="https://noahbres.github.io">Work</a>
+		<a href="https://noahbres.github.io">Contact</a>
+	</ul>
+</div>
+
 <div class="wrapper flex">
 	<h1 class="title">My Thoughts</h1>
 	<h2 class="subtitle">Collection of thoughts and misgivings from Noah</h2>
@@ -23,6 +37,7 @@ stylesheet: styles/home.css
 			<h4 class="post-meta">{{ post.date | date: date_format }}</h4>
 			<a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
 			<p class="excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+			<p class="excerpt-mobile">{{ post.short_summary }}</p>
 		</li>
 		{%- endfor -%}
 	</ul>

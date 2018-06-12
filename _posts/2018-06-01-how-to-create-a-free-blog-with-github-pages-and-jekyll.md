@@ -4,6 +4,7 @@ title:  "How to create a free blog with Github Pages and Jekyll"
 date:   2018-06-01 16:26:39 -0500
 categories: jekyll github-pages tutorial
 stylesheet: styles/post.css
+short_summary: Have you ever wanted to start a blog? Maybe share your new programming knowledge? Share some cooking recipes? Github Pages + Jekyll is a wonderful solution for people who want something infinitely more customizable and unique. The best part? It's free
 ---
 So you want to start a blog. Maybe spread your newfound programming knowledge. Or maybe you're posting a writeup about one of your projects. Or writing a cool baking recipe. But you don't want to manage your own CMS like WordPress, or hosting, or DNS, or all that manual labour work. You want something that just works. You stumble upon [Medium][medium-link]. Medium is great. Huge fan. But you want more. You don't want to fit into the cookie cutter mold. You want your own site. Your own *style*. A little <span class="flair"><span>flair</span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>. The answer?
 <!--more-->
