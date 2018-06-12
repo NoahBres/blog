@@ -608,16 +608,19 @@ footer .found-the-article-useful {
 	}
 
 	#mobile-nav-hamburger[type=checkbox]:checked ~ .mobile-toc {
-		transform: translateY(0);
+/*		transform: translateX(0); */
+		transform: scale(1);
+		opacity: 1;
+		pointer-events: auto;
 	}
 
 	.mobile-toc {
 		display: block;
 		position: fixed;
-		bottom: 56px;
+		top: 1%;
 
-		width: 90%;
-		height: calc(90% - 56px);
+		width: 95%;
+		height: calc(98% - 56px);
 		padding: 0 2em;
 
 		background: #fff;
@@ -627,12 +630,13 @@ footer .found-the-article-useful {
 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.13);
 	
 		border: 1px solid #e5e5e5;
-		border-radius: 1em;
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0;
+		border-radius: 0.5em;
 
-		transform: translateY(100%);
-		transition: 300ms ease-in-out;
+		pointer-events: none;
+		opacity: 0;
+		transform: scale(0.9);
+/*		transform: translateX(-105%);
+*/		transition: 200ms ease-in-out;
 	}
 
 	.mobile-toc h2 {
