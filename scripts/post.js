@@ -1,6 +1,7 @@
 let didScroll = false;
 
 const tocData = document.getElementById('toc-data');
+const hamburgerMenuInput = document.getElementById('mobile-nav-hamburger');
 let headings;
 let lastHeading;
 
@@ -24,6 +25,13 @@ if(tocData !== null) {
 	// Headings scroll stuff
 	headings = document.querySelector('article').querySelectorAll('h2, h3');
 	lastHeading = null;
+
+	const mobileTocLinks = document.querySelectorAll('#mobile-table-o-contents a');
+	for(let i = 0; i < mobileTocLinks.length; i++) {
+		mobileTocLinks[i].addEventListener('click', function(e) {
+			hamburgerMenuInput.checked = false;
+		});
+	}
 }
 
 // Heading stuff
