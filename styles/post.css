@@ -677,12 +677,12 @@ footer .found-the-article-useful {
 /* Window videos */
 @media (min-width: 800px) {
 	.window-video {
-		display: flex;
+		display: block;
 		align-self: center;
 	}
 
 	.window-top {
-		display: block;
+		display: flex;
 		height: 45px;
 		width: 700px;
 		background: #E3E5E9;
