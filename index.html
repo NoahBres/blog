@@ -1,0 +1,54 @@
+---
+layout: default
+stylesheet: styles/home.css
+---
+
+<nav class="nav flex">
+	<a href="https://noahbres.github.io" class="refer-home">Noah Bresler</a>
+	<ul>
+		<li><a href="https://noahbres.github.io">About</a></li>
+		<li><a href="https://noahbres.github.io">Work</a></li>
+		<li><a href="https://noahbres.github.io">Contact</a></li>
+	</ul>
+</nav>
+<input type="checkbox" id="mobile-nav-hamburger">
+<label id="mobile-nav-hamburger-menu" for="mobile-nav-hamburger"></label>
+<nav class="mobile-nav flex">
+	<a class="mobile-nav-home" href="#">Noah</a>
+</nav>
+<div class="mobile-pullout flex">
+	<ul class="flex">
+		<a href="https://noahbres.github.io">Home</a>
+		<a href="https://noahbres.github.io">About</a>
+		<a href="https://noahbres.github.io">Work</a>
+		<a href="https://noahbres.github.io">Contact</a>
+	</ul>
+</div>
+
+<div class="wrapper flex">
+	<h1 class="title">My Thoughts</h1>
+	<h2 class="subtitle">Collection of thoughts and misgivings from Noah</h2>
+
+	{%- if site.posts.size > 0 -%}
+	<ul class="post-list">
+		{%- for post in site.posts -%}
+		<li>
+			{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+			<h4 class="post-meta">{{ post.date | date: date_format }}</h4>
+			<a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+			<p class="excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+			<p class="excerpt-mobile">{{ post.short_summary }}</p>
+		</li>
+		{%- endfor -%}
+	</ul>
+
+	<p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+	{%- endif -%}
+	<ul class="social flex">
+		<li><a href="https://twitter.com/NoahBres" target="_blank" rel="noopener" class="twitter" data-handle="@NoahBres">Twitter</a></li>
+		<li><a href="https://www.instagram.com/noah.beta/" target="_blank" rel="noopener" class="instagram" data-handle="@noah.beta">Instagram</a></li>
+		<li><a href="https://github.com/NoahBres" target="_blank" rel="noopener" class="github" data-handle="@NoahBres">Github</a></li>
+		<li><a href="https://codepen.io/noahbres" target="_blank" rel="noopener" class="codepen" data-handle="@NoahBres">Codepen</a></li>
+		<li><a href="mailto:noahbres@gmail.com" target="_top" rel="noopener" class="email" data-handle="noahbres@gmail.com">Email</a></li>
+	</ul>
+</div>
