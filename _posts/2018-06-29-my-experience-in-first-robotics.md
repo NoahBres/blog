@@ -4,7 +4,7 @@ title: "My experience in FIRST robotics"
 date: 2018-06-29 6:43:00 -0500
 categories: robotics wordy
 stylesheet: styles/post.css
-short_summary: Test test
+short_summary: I have had the pleasure of participating in the FIRST Tech Challenge and FIRST Robotics Challenge competitions. They were amazing experiences which I have learned much from. These competitions are more than just robotics competitions but a way to inspire younger people to take interest in STEM.
 ---
 As of my sophmore year in highschool, my robotics experience has come from tinkering with Arduinos and involvement in an organization called FIRST. FIRST is an organization created by [Dean Kamen][dean-kamen], inventor, entrepeneur, creator of the Segway (cool right?). 
 
