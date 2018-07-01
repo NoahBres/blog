@@ -22,6 +22,8 @@ url: "https://noahbres.github.io" # the base hostname & protocol for your site, 
 twitter_username: noahbres
 github_username:  noahbres
 
+future: true
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
