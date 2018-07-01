@@ -64,8 +64,18 @@ For the frontend I decide to go with a Vue SPA as that is where my experience pr
   - Con: Not as big as React
   - Con: Probably not as easy to hire for as React
 - Frontend Styling: Vuetify
-  - Provides ready made Material Design components for Vue
-    Super easy out of the box beautiful designs
+  - Provides ready made Material Design components for Vue. Super easy out of the box beautiful designs
 
 ## Conclusion
 This concludes the first dev log where I go over the very first steps into how I started building this product. I scope the problem. Then designed some product mockups. And then decided the technology stack. Next is to start programming. See you next log!
+
+<script id="toc-data" type="text/template">
+	<li><a href="#step-1-create-a-list-of-objectives">1. Create a list of objectives</a></li>
+	<li><a href="#step-2-basic-design-mockups">2. Basic design mockups</a></li>
+	<li><a href="#step-3-decide-tech-stack">3. Decide tech stack</a>
+		<ul>
+			<li><a href="#current-stack">Current stack</a></li>
+		</ul>
+	</li>
+	<li><a href="#conclusion">Conclusion</a></li>
+</script>
